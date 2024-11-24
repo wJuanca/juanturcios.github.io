@@ -1,0 +1,40 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	html {
+		font-family: system-ui, sans-serif;
+		background: radial-gradient(circle at top center, #C800FF 0%, transparent 50%),
+					linear-gradient(180deg, #13151a 0%, #13151a 100%);
+		background-attachment: fixed;
+		min-height: 100vh;
+	}
+
+	body {
+		min-height: 100vh;
+	}
+
+	/* Opcional: para asegurar scrolling suave */
+	html {
+		scroll-behavior: smooth;
+	}
+</style>
