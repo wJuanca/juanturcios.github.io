@@ -1,5 +1,6 @@
 ---
 import ProjectCard from "../components/ProjectCard.astro";
+import Skills from "../components/Skills.astro";
 import Layout from "../layouts/Layout.astro";
 
 // Datos de ejemplo - puedes mover esto a un archivo separado
@@ -297,4 +298,12 @@ const projects = [
       </div>
     </div>
   </section>
+
+  <section id="skills" class="min-h-screen flex items-center justify-center">
+    <div>
+      <h1 class="text-white font-extrabold text-4xl text-center">My Skill</h1>
+      <Skills />
+    </div>
+  </section>
+  
 </Layout>
