@@ -82,6 +82,27 @@ const projects = [
 
   // Puedes agregar más proyectos aquí
 ];
+
+const languages = [
+    { name: 'JavaScript', icon: 'logos:javascript' },
+    { name: 'HTML', icon: 'devicon:html5' },
+    { name: 'Python', icon: 'devicon:css3' },
+    { name: 'Sql Server', icon: 'devicon:microsoftsqlserver' },
+    { name: 'Java', icon: 'logos:java' }
+];
+
+const tools = [
+    { name: 'Git', icon: 'logos:git-icon' },
+    { name: 'Figma', icon: 'logos:figma' },
+    { name: 'Astro', icon: 'vscode-icons:file-type-astro' },
+    { name: 'Android Studio', icon: 'devicon:androidstudio' },
+    { name: 'Node.js', icon: 'logos:nodejs-icon' },
+    { name: 'Tailwind', icon: 'logos:tailwindcss-icon' },
+    { name: 'Vercel', icon: 'logos:vercel-icon' },
+    { name: 'PhotoShop', icon: 'devicon:photoshop' },
+    { name: 'DaVinci Resolve', icon: 'simple-icons:davinciresolve' },
+    { name: 'Less', icon: 'logos:less' }
+];
 ---
 
 <Layout title="My Portfolio">
@@ -305,5 +326,47 @@ const projects = [
       <Skills />
     </div>
   </section>
+
+  <section class="min-h-screen w-full flex items-center justify-center py-16 px-4">
+    <div class="container mx-auto">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-white mb-12 tracking-wider">
+            Tecnologías
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* Card Lenguajes */}
+            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:scale-[1.02] transition-transform duration-300">
+                <h3 class="text-2xl font-semibold text-center text-white mb-6">Lenguajes</h3>
+                <div class="grid grid-cols-3 gap-4">
+                    {languages.map((lang) => (
+                        <div class="flex flex-col items-center justify-center space-y-2">
+                            <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center">
+                                <iconify-icon icon={lang.icon} width="48" height="48" class="text-white"></iconify-icon>
+                            </div>
+                            <p class="text-sm text-white/80 text-center">{lang.name}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Card Herramientas */}
+            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:scale-[1.02] transition-transform duration-300">
+                <h3 class="text-2xl font-semibold text-center text-white mb-6">Herramientas</h3>
+                <div class="grid grid-cols-3 gap-4">
+                    {tools.map((tool) => (
+                        <div class="flex flex-col items-center justify-center space-y-2">
+                            <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center">
+                                <iconify-icon icon={tool.icon} width="48" height="48" class="text-white"></iconify-icon>
+                            </div>
+                            <p class="text-sm text-white/80 text-center">{tool.name}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script is:inline src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
   
 </Layout>
