@@ -13,12 +13,12 @@ interface Props {
 const { title, description, image, tools, codeLink, previewLink } = Astro.props;
 ---
 <article class="flex flex-col md:flex-row gap-6 rounded-lg overflow-hidden p-4 max-w-4xl">
-  <!-- Project Image (Primero en móviles) -->
-  <div class="w-full md:w-1/2">
+  <!-- Project Image (Rectangular en móviles y escritorio) -->
+  <div class="w-full md:w-1/2 h-[200px] md:h-[250px]"> <!-- Altura diferente para móvil y escritorio -->
     <img 
       src={image} 
       alt={`Screenshot of ${title} project`}
-      class="w-full h-auto md:h-full object-cover rounded-lg"
+      class="w-full h-full object-cover rounded-lg"
     />
   </div>
   
