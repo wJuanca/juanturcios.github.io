@@ -84,169 +84,211 @@ const projects = [
 ];
 
 const languages = [
-    { name: 'JavaScript', icon: 'logos:javascript' },
-    { name: 'HTML', icon: 'devicon:html5' },
-    { name: 'Python', icon: 'devicon:css3' },
-    { name: 'Sql Server', icon: 'devicon:microsoftsqlserver' },
-    { name: 'Java', icon: 'logos:java' }
+  { name: "JavaScript", icon: "logos:javascript" },
+  { name: "HTML", icon: "devicon:html5" },
+  { name: "CSS", icon: "devicon:css3" },
+  { name: "Sql Server", icon: "devicon:microsoftsqlserver" },
+  { name: "Java", icon: "logos:java" },
 ];
 
 const tools = [
-    { name: 'Git', icon: 'logos:git-icon' },
-    { name: 'Figma', icon: 'logos:figma' },
-    { name: 'Astro', icon: 'vscode-icons:file-type-astro' },
-    { name: 'Android Studio', icon: 'devicon:androidstudio' },
-    { name: 'Node.js', icon: 'logos:nodejs-icon' },
-    { name: 'Tailwind', icon: 'logos:tailwindcss-icon' },
-    { name: 'Vercel', icon: 'logos:vercel-icon' },
-    { name: 'PhotoShop', icon: 'devicon:photoshop' },
-    { name: 'DaVinci Resolve', icon: 'simple-icons:davinciresolve' },
-    { name: 'Less', icon: 'logos:less' }
+  { name: "Git", icon: "logos:git-icon" },
+  { name: "Figma", icon: "logos:figma" },
+  { name: "Astro", icon: "vscode-icons:file-type-astro" },
+  { name: "Android Studio", icon: "devicon:androidstudio" },
+  { name: "Node.js", icon: "logos:nodejs-icon" },
+  { name: "Tailwind", icon: "logos:tailwindcss-icon" },
+  { name: "Vercel", icon: "logos:vercel-icon" },
+  { name: "PhotoShop", icon: "devicon:photoshop" },
+  { name: "DaVinci Resolve", icon: "simple-icons:davinciresolve" },
+  { name: "Less", icon: "logos:less" },
 ];
 ---
 
 <Layout title="My Portfolio">
   <section
     id="Landing"
-    class="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-24 lg:px-48 relative overflow-hidden"
+    class="min-h-screen flex flex-col md:flex-row items-center justify-center px-4 md:px-24 lg:px-48 relative overflow-hidden"
   >
     <!-- Texto a la izquierda -->
     <div
-      class="flex flex-col items-start text-left w-full md:w-1/2 space-y-4 animate-fadeIn px-8"
+      class="flex flex-col items-start text-left w-full md:w-1/2 space-y-4 animate-fadeIn px-4 md:px-8"
     >
       <h1
-        class="text-4xl md:text-6xl font-bold text-pink-400 hover:text-pink-300 transition-colors duration-300 z-10"
+        class="text-4xl md:text-6xl font-bold text-pink-400 hover:text-pink-300 transition-colors duration-300 z-10 relative"
       >
-        ¡Hola!
+        <span class="overflow-hidden block h-[1.2em]">
+          <span
+            id="changing-hello"
+            class="inline-block transition-transform duration-500 ease-in-out"
+            style="transform: translateY(0);"
+          >
+            ¡Hola!<br />
+            Hello!<br />
+            Bonjour!<br />
+            Ciao!<br />
+            こんにちは!<br />
+            Привет!<br />
+            مرحبا!
+          </span>
+        </span>
       </h1>
+
       <h2 class="text-3xl md:text-5xl font-bold text-white">
-        Soy Juan Turcios
+        I am Juan Turcios
       </h2>
       <h3 class="text-lg md:text-2xl text-gray-300 font-medium">
         Computer Science Engineer
       </h3>
       <p class="text-sm md:text-lg text-gray-200 max-w-xl leading-relaxed">
-        Soy estudiante de Ingeniería en Ciencias de la Computación con
-        experiencia en diseño, análisis y programación de páginas web y
-        software. Me destaco en el trabajo en equipo y tengo una capacidad
-        natural para aprender rápidamente.
+        I am a Computer Science Engineering student with experience in
+        designing, analyzing, and programming web pages and software. I excel in
+        teamwork and have a natural ability to learn quickly.
       </p>
 
-      <div
-        class="flex flex-col sm:flex-row items-start sm:items-center gap-6 mt-8"
-      >
-        <!-- Botón de Curriculum -->
-        <a
-          href="/curriculum.pdf"
-          class="group bg-pink-500 text-white py-3 px-8 rounded-full text-sm flex items-center gap-2 hover:bg-pink-600 transition-all duration-300 transform hover:scale-105"
-          download
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-arrow-down-from-line"
-            ><path d="M19 3H5"></path><path d="M12 21V7"></path><path
-              d="m6 15 6 6 6-6"></path></svg
+      <div class="flex flex-col sm:flex-row items-center gap-4 mt-6 w-full">
+        <!-- Contenedor para CV y Projects en móvil -->
+        <div class="flex items-center gap-4 w-full sm:w-auto">
+          <!-- Botón de Curriculum -->
+          <a
+            href="/curriculum.pdf"
+            class="inline-flex items-center bg-pink-500 text-white py-3 px-4 rounded-full text-sm gap-2 hover:bg-pink-600 transition-all duration-300 transform hover:scale-105"
+            download
           >
-          Descargar CV
-        </a>
-      </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-down-from-line"
+            >
+              <path d="M19 3H5"></path>
+              <path d="M12 21V7"></path>
+              <path d="m6 15 6 6 6-6"></path>
+            </svg>
+            Descargar CV
+          </a>
 
-      <!-- Redes sociales -->
-      <div class="flex items-center gap-6 mt-8">
-        <a
-          href="https://instagram.com/"
-          class="text-gray-300 hover:text-pink-400 transition-all duration-300 transform hover:scale-110"
-          aria-label="Instagram"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-instagram"
+          <!-- Botón de Projects para móvil -->
+          <a
+            href="#projects"
+            class="sm:hidden group bg-transparent border-2 border-pink-500 text-pink-500 py-2 px-4 rounded-full text-sm flex items-center gap-2 hover:bg-pink-500 hover:text-white transition-all duration-300 transform hover:scale-105"
           >
-            <title>Instagram</title>
-            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-          </svg>
-        </a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-folder-kanban"
+            >
+              <path
+                d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"
+              ></path>
+              <path d="M8 10v4"></path><path d="M12 10v2"></path><path
+                d="M16 10v6"></path>
+            </svg>
+            Projects
+          </a>
+        </div>
 
-        <a
-          href="https://github.com/"
-          class="text-gray-300 hover:text-white transition-all duration-300 transform hover:scale-110"
-          aria-label="GitHub"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-github"
+        <!-- Redes sociales -->
+        <div class="flex items-center gap-4 mt-4 sm:mt-0">
+          <a
+            href="https://instagram.com/"
+            class="text-gray-300 hover:text-pink-400 transition-all duration-300 transform hover:scale-110"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <title>GitHub</title>
-            <path
-              d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
-            ></path>
-            <path d="M9 18c-4.51 2-5-2-7-2"></path>
-          </svg>
-        </a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-instagram"
+            >
+              <title>Instagram</title>
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+            </svg>
+          </a>
 
-        <a
-          href="https://linkedin.com/"
-          class="text-gray-300 hover:text-blue-500 transition-all duration-300 transform hover:scale-110"
-          aria-label="LinkedIn"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-linkedin"
+          <a
+            href="https://github.com/"
+            class="text-gray-300 hover:text-white transition-all duration-300 transform hover:scale-110"
+            aria-label="GitHub"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <title>LinkedIn</title>
-            <path
-              d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7H10v-7a6 6 0 0 1 6-6z"
-            ></path>
-            <rect width="4" height="12" x="2" y="9"></rect>
-            <circle cx="4" cy="4" r="2"></circle>
-          </svg>
-        </a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-github"
+            >
+              <title>GitHub</title>
+              <path
+                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+              ></path>
+              <path d="M9 18c-4.51 2-5-2-7-2"></path>
+            </svg>
+          </a>
+
+          <a
+            href="https://linkedin.com/"
+            class="text-gray-300 hover:text-blue-500 transition-all duration-300 transform hover:scale-110"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-linkedin"
+            >
+              <title>LinkedIn</title>
+              <path
+                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7H10v-7a6 6 0 0 1 6-6z"
+              ></path>
+              <rect width="4" height="12" x="2" y="9"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
 
-
     <div
-      class="w-full md:w-1/2 flex justify-center items-center mt-12 md:mt-0 px-8"
+      class="w-full md:w-1/2 flex justify-center items-center mt-8 md:mt-0 px-4"
     >
       <div class="relative">
         <div
@@ -256,18 +298,18 @@ const tools = [
         <img
           src="/assets/img/perfil.png"
           alt="Juan Turcios"
-          class="w-80 h-80 md:w-[450px] md:h-[450px] rounded-full object-cover relative z-10"
+          class="w-48 h-48 sm:w-64 sm:h-64 md:w-[450px] md:h-[450px] rounded-full object-cover relative z-10 mx-auto"
         />
       </div>
     </div>
 
-    <!-- Botón de Contacto y flecha de scroll en el pie -->
+    <!-- Botón de Projects para escritorio -->
     <div
       class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-8"
     >
       <a
         href="#projects"
-        class="group bg-transparent border-2 border-pink-500 text-pink-500 py-3 px-8 rounded-full text-sm flex items-center gap-2 hover:bg-pink-500 hover:text-white transition-all duration-300 transform hover:scale-105"
+        class="hidden sm:flex group bg-transparent border-2 border-pink-500 text-pink-500 py-2 px-6 rounded-full text-sm items-center gap-2 hover:bg-pink-500 hover:text-white transition-all duration-300 transform hover:scale-105"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -280,12 +322,13 @@ const tools = [
           stroke-linecap="round"
           stroke-linejoin="round"
           class="lucide lucide-folder-kanban"
-          ><path
+        >
+          <path
             d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"
           ></path>
           <path d="M8 10v4"></path><path d="M12 10v2"></path><path d="M16 10v6"
-          ></path></svg
-        >
+          ></path>
+        </svg>
         Projects
       </a>
 
@@ -304,13 +347,44 @@ const tools = [
         <path d="m19 12-7 7-7-7"></path>
       </svg>
     </div>
+
+    <script type="text/javascript">
+      const element = document.getElementById('changing-hello');
+      const words = ['¡Hola!', 'Hello!', 'Bonjour!', 'Ciao!', 'こんにちは!', 'Привет!', 'مرحبا!'];
+      
+      let index = 0;
+      
+      function updateGreeting() {
+        // Incrementar el índice de forma cíclica
+        index = (index + 1) % words.length;
+        
+        // Calcular el desplazamiento 
+        const offset = index * -1.2; // Cada palabra ocupa 1.2em de altura
+        
+        // Aplicar la transformación para el scroll
+        element.style.transform = `translateY(${offset}em)`;
+      }
+      
+      // Cambiar la palabra cada 3 segundos
+      setInterval(updateGreeting, 3000);
+      </script>
+      
+      <style>
+      #changing-hello {
+        line-height: 1.2em; /* Asegurar altura consistente */
+        white-space: nowrap; /* Evitar saltos de línea */
+      }
+      </style>
   </section>
 
-  <section id="projects"
+  <section
+    id="projects"
     class="min-h-screen flex flex-col items-center justify-center py-20 px-4"
   >
     <div class="max-w-7xl w-full">
-      <h2 class="text-4xl font-bold text-center text-white mb-16">
+      <h2
+        class="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-white mb-12 tracking-wider"
+      >
         My Projects
       </h2>
 
@@ -322,158 +396,265 @@ const tools = [
 
   <section id="skills" class="min-h-screen flex items-center justify-center">
     <div>
-      <h1 class="text-white font-extrabold text-4xl text-center">My Skill</h1>
+      <h2
+        class="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-white mb-12 tracking-wider"
+      >
+        Skills
+      </h2>
       <Skills />
     </div>
   </section>
 
-  <section id="technologies" class="min-h-screen w-full flex items-center justify-center py-16 px-4">
+  <section
+    id="technologies"
+    class="min-h-screen w-full flex items-center justify-center py-16 px-4"
+  >
     <div class="container mx-auto">
-        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-white mb-12 tracking-wider">
-            Tecnologías
+      <h2
+        class="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-white mb-12 tracking-wider"
+      >
+        Tecnologías
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        {/* Card Lenguajes */}
+        <div
+          class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:scale-[1.02] transition-transform duration-300"
+        >
+          <h3 class="text-2xl font-semibold text-center text-white mb-6">
+            Lenguajes
+          </h3>
+          <div class="grid grid-cols-3 gap-4">
+            {
+              languages.map((lang) => (
+                <div class="flex flex-col items-center justify-center space-y-2">
+                  <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center">
+                    <iconify-icon
+                      icon={lang.icon}
+                      width="48"
+                      height="48"
+                      class="text-white"
+                    />
+                  </div>
+                  <p class="text-sm text-white/80 text-center">{lang.name}</p>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        {/* Card Herramientas */}
+        <div
+          class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:scale-[1.02] transition-transform duration-300"
+        >
+          <h3 class="text-2xl font-semibold text-center text-white mb-6">
+            Herramientas
+          </h3>
+          <div class="grid grid-cols-3 gap-4">
+            {
+              tools.map((tool) => (
+                <div class="flex flex-col items-center justify-center space-y-2">
+                  <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center">
+                    <iconify-icon
+                      icon={tool.icon}
+                      width="48"
+                      height="48"
+                      class="text-white"
+                    />
+                  </div>
+                  <p class="text-sm text-white/80 text-center">{tool.name}</p>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="isolate px-6 py-24 sm:py-32 lg:px-8">
+      <div
+        class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
+        aria-hidden="true"
+      >
+        <div
+          class="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
+          style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+        >
+        </div>
+      </div>
+      <div class="mx-auto max-w-2xl text-center">
+        <h2
+          class="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-white mb-12 tracking-wider"
+        >
+          Contact
         </h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {/* Card Lenguajes */}
-            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:scale-[1.02] transition-transform duration-300">
-                <h3 class="text-2xl font-semibold text-center text-white mb-6">Lenguajes</h3>
-                <div class="grid grid-cols-3 gap-4">
-                    {languages.map((lang) => (
-                        <div class="flex flex-col items-center justify-center space-y-2">
-                            <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center">
-                                <iconify-icon icon={lang.icon} width="48" height="48" class="text-white"></iconify-icon>
-                            </div>
-                            <p class="text-sm text-white/80 text-center">{lang.name}</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-            {/* Card Herramientas */}
-            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:scale-[1.02] transition-transform duration-300">
-                <h3 class="text-2xl font-semibold text-center text-white mb-6">Herramientas</h3>
-                <div class="grid grid-cols-3 gap-4">
-                    {tools.map((tool) => (
-                        <div class="flex flex-col items-center justify-center space-y-2">
-                            <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center">
-                                <iconify-icon icon={tool.icon} width="48" height="48" class="text-white"></iconify-icon>
-                            </div>
-                            <p class="text-sm text-white/80 text-center">{tool.name}</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="contact">
-  <div class="isolate px-6 py-24 sm:py-32 lg:px-8">
-    <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]" aria-hidden="true">
-      <div class="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-    </div>
-    <div class="mx-auto max-w-2xl text-center">
-      <h2 class="text-balance text-4xl font-semibold tracking-tight text-White sm:text-5xl">Contact</h2>
-      <p class="mt-2 text-lg/8 text-gray-600">Aute magna irure deserunt veniam aliqua magna enim voluptate.</p>
-    </div>
-    <form id="contact-form" action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
-      <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-        <div>
-          <label for="first-name" class="block text-sm/6 font-semibold text-white">First name</label>
-          <div class="mt-2.5">
-            <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600" required>
-          </div>
-        </div>
-        <div>
-          <label for="last-name" class="block text-sm/6 font-semibold text-white">Last name</label>
-          <div class="mt-2.5">
-            <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600" required>
-          </div>
-        </div>
-        <div class="sm:col-span-2">
-          <label for="email" class="block text-sm/6 font-semibold text-white">Email</label>
-          <div class="mt-2.5">
-            <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600" required>
-          </div>
-        </div>
-        <div class="sm:col-span-2">
-          <label for="phone-number" class="block text-sm/6 font-semibold text-white">Phone number</label>
-          <div class="mt-2.5">
-            <input type="text" name="phone-number" id="phone-number" class="block min-w-0 grow py-1.5 pl-1 pr-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline focus:outline-0 sm:text-sm/6" placeholder="123-456-7890" required>
-          </div>
-        </div>
-        <div class="sm:col-span-2">
-          <label for="message" class="block text-sm/6 font-semibold text-white">Message</label>
-          <div class="mt-2.5">
-            <textarea name="message" id="message" rows="4" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600" required></textarea>
-          </div>
-        </div>
+        <p class="mt-2 text-lg/8 text-gray-600">
+          Fill out the form to be able to work with me
+        </p>
       </div>
-      <div class="mt-10">
-        <button type="submit" id="submit-button" class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Send</button>
-      </div>
-    </form>
-  </div>
+      <form
+        id="contact-form"
+        action="#"
+        method="POST"
+        class="mx-auto mt-16 max-w-xl sm:mt-20"
+      >
+        <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+          <div>
+            <label
+              for="first-name"
+              class="block text-sm/6 font-semibold text-white">First name</label
+            >
+            <div class="mt-2.5">
+              <input
+                type="text"
+                name="first-name"
+                id="first-name"
+                autocomplete="given-name"
+                class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                required
+              />
+            </div>
+          </div>
+          <div>
+            <label
+              for="last-name"
+              class="block text-sm/6 font-semibold text-white">Last name</label
+            >
+            <div class="mt-2.5">
+              <input
+                type="text"
+                name="last-name"
+                id="last-name"
+                autocomplete="family-name"
+                class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                required
+              />
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="email" class="block text-sm/6 font-semibold text-white"
+              >Email</label
+            >
+            <div class="mt-2.5">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                autocomplete="email"
+                class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                required
+              />
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <label
+              for="phone-number"
+              class="block text-sm/6 font-semibold text-white"
+              >Phone number</label
+            >
+            <div class="mt-2.5">
+              <input
+                type="text"
+                name="phone-number"
+                id="phone-number"
+                class="block min-w-0 grow py-1.5 pl-1 pr-3 text-base text-gray-900 sm:text-sm/6 rounded-md bg-white px-3.5 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                placeholder="123-456-7890"
+                required
+              />
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <label
+              for="message"
+              class="block text-sm/6 font-semibold text-white">Message</label
+            >
+            <div class="mt-2.5">
+              <textarea
+                name="message"
+                id="message"
+                rows="4"
+                class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                required></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="mt-10">
+          <button
+            type="submit"
+            id="submit-button"
+            class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >Send</button
+          >
+        </div>
+      </form>
+    </div>
 
-  <!-- Script para integrar con MailJS -->
-<script type="text/javascript">
-  document.addEventListener('DOMContentLoaded', function() {
-    emailjs.init("p1hlQQTBCHMHcr7wI");
+    <!-- Script para integrar con MailJS -->
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        emailjs.init("p1hlQQTBCHMHcr7wI");
 
-    const form = document.getElementById('contact-form');
-    const submitButton = document.getElementById('submit-button');
-    
-    if (!form || !submitButton) {
-        console.error('No se encontró el formulario o el botón de envío');
-        return;
-    }
+        const form = document.getElementById("contact-form");
+        const submitButton = document.getElementById("submit-button");
 
-    const showMessage = (message, isError = false) => {
-        alert(message);
-    };
+        if (!form || !submitButton) {
+          console.error("No se encontró el formulario o el botón de envío");
+          return;
+        }
 
-    const setButtonState = (isLoading) => {
-        submitButton.disabled = isLoading;
-        submitButton.textContent = isLoading ? 'Enviando...' : 'Enviar Mensaje';
-    };
+        const showMessage = (message, isError = false) => {
+          alert(message);
+        };
 
-    form.addEventListener('submit', async function(event) {
-        event.preventDefault();
-        
-        try {
+        const setButtonState = (isLoading) => {
+          submitButton.disabled = isLoading;
+          submitButton.textContent = isLoading
+            ? "Enviando..."
+            : "Enviar Mensaje";
+        };
+
+        form.addEventListener("submit", async function (event) {
+          event.preventDefault();
+
+          try {
             setButtonState(true);
 
             // Enviar el formulario con MailJS
             const response = await emailjs.sendForm(
-                'service_irf1iyn',  // Tu Service ID
-                'template_2r9ryvr',  // Tu Template ID
-                form  // El formulario que se enviará
+              "service_irf1iyn", // Tu Service ID
+              "template_2r9ryvr", // Tu Template ID
+              form, // El formulario que se enviará
             );
 
             if (response.status === 200) {
-                showMessage('¡Mensaje enviado con éxito!');
-                form.reset();
+              showMessage("¡Mensaje enviado con éxito!");
+              form.reset();
             } else {
-                throw new Error('Error al enviar el mensaje');
+              throw new Error("Error al enviar el mensaje");
             }
-        } catch (error) {
-            console.error('Error:', error);
-            showMessage('Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.', true);
-        } finally {
+          } catch (error) {
+            console.error("Error:", error);
+            showMessage(
+              "Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.",
+              true,
+            );
+          } finally {
             setButtonState(false);
-        }
-    });
-  });
-</script>
+          }
+        });
+      });
+    </script>
 
-<script
-  type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+  </section>
 
-</section>
-
-
-<script is:inline src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
-  
+  <script
+    is:inline
+    src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"
+  ></script>
 </Layout>
