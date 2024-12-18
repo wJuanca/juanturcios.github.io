@@ -1,0 +1,117 @@
+---
+const { class: className } = Astro.props;
+---
+
+<div class={`fixed top-4 right-4 z-50 ${className}`}>
+  <div class="language-toggle-container relative">
+    <!-- Botón interactivo -->
+    <button
+      id="language-toggle"
+      class=" 
+        relative  
+        w-24 
+        h-10 
+        bg-gradient-to-br 
+        from-purple-500 
+        to-indigo-600 
+        rounded-full 
+        cursor-pointer 
+        shadow-lg 
+        transition-all 
+        duration-500 
+        ease-in-out 
+        hover:scale-105 
+        active:scale-95 
+        flex 
+        items-center 
+        justify-center 
+        overflow-hidden
+      "
+    >
+      <!-- Indicador deslizante -->
+      <span
+        id="toggle-slider"
+        class="
+          absolute
+          left-1
+          w-8
+          h-8
+          bg-white
+          rounded-full
+          shadow-md
+          transform
+          transition-transform
+          duration-500
+          ease-in-out
+        "
+      ></span>
+
+      <!-- Texto ES -->
+      <span
+        id="text-es"
+        class="
+          absolute
+          left-3
+          text-black
+          text-sm
+          font-semibold
+          transition-opacity
+          duration-500
+          ease-in-out
+        "
+      >
+        ES
+      </span>
+
+      <!-- Texto EN -->
+      <span
+        id="text-en"
+        class="
+          absolute
+          right-3
+          text-black
+          text-sm
+          font-semibold
+          opacity-0
+          transition-opacity
+          duration-500
+          ease-in-out
+        "
+      >
+        EN
+      </span>
+    </button>
+  </div>
+</div>
+
+<script type="text/javascript">
+  // Lógica para cambiar el idioma
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('language-toggle');
+    const toggleSlider = document.getElementById('toggle-slider');
+    const textES = document.getElementById('text-es');
+    const textEN = document.getElementById('text-en');
+
+    let isEnglish = false; // Estado inicial en Español (false)
+
+    toggleButton.addEventListener('click', () => {
+      // Alternar entre los idiomas
+      isEnglish = !isEnglish;
+
+      // Mover el slider
+      if (isEnglish) {
+        toggleSlider.style.transform = 'translateX(3.5rem)'; // Cambia el slider al final
+        textES.style.opacity = '0'; // Ocultar "ES"
+        textEN.style.opacity = '1'; // Mostrar "EN"
+        console.log('Idioma cambiado a Inglés');
+        document.documentElement.lang = 'en'; // Cambiar atributo lang
+      } else {
+        toggleSlider.style.transform = 'translateX(0)'; // Regresa el slider al inicio
+        textES.style.opacity = '1'; // Mostrar "ES"
+        textEN.style.opacity = '0'; // Ocultar "EN"
+        console.log('Idioma cambiado a Español');
+        document.documentElement.lang = 'es'; // Cambiar atributo lang
+      }
+    });
+  });
+</script>
