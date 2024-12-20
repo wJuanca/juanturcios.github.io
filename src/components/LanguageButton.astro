@@ -87,31 +87,48 @@ const { class: className } = Astro.props;
 <script type="text/javascript">
   // Lógica para cambiar el idioma
   document.addEventListener('DOMContentLoaded', () => {
-    const toggleButton = document.getElementById('language-toggle');
-    const toggleSlider = document.getElementById('toggle-slider');
-    const textES = document.getElementById('text-es');
-    const textEN = document.getElementById('text-en');
+  const toggleButton = document.getElementById('language-toggle');
+  const toggleSlider = document.getElementById('toggle-slider');
+  const textES = document.getElementById('text-es');
+  const textEN = document.getElementById('text-en');
+  const spanishContent = document.getElementById('spanish-content');
+  const englishContent = document.getElementById('english-content');
 
-    let isEnglish = false; // Estado inicial en Español (false)
+  let isEnglish = false; // Estado inicial en Español (false)
 
-    toggleButton.addEventListener('click', () => {
-      // Alternar entre los idiomas
-      isEnglish = !isEnglish;
+  toggleButton.addEventListener('click', () => {
+    // Alternar entre los idiomas
+    isEnglish = !isEnglish;
 
-      // Mover el slider
-      if (isEnglish) {
-        toggleSlider.style.transform = 'translateX(3.5rem)'; // Cambia el slider al final
-        textES.style.opacity = '0'; // Ocultar "ES"
-        textEN.style.opacity = '1'; // Mostrar "EN"
-        console.log('Idioma cambiado a Inglés');
-        document.documentElement.lang = 'en'; // Cambiar atributo lang
-      } else {
-        toggleSlider.style.transform = 'translateX(0)'; // Regresa el slider al inicio
-        textES.style.opacity = '1'; // Mostrar "ES"
-        textEN.style.opacity = '0'; // Ocultar "EN"
-        console.log('Idioma cambiado a Español');
-        document.documentElement.lang = 'es'; // Cambiar atributo lang
-      }
-    });
+    // Mover el slider
+    if (isEnglish) {
+      toggleSlider.style.transform = 'translateX(3.5rem)'; // Cambia el slider al final
+      textES.style.opacity = '0'; // Ocultar "ES"
+      textEN.style.opacity = '1'; // Mostrar "EN"
+
+      // Mostrar contenido en inglés, ocultar español
+      spanishContent.classList.add('hidden');
+      spanishContent.classList.remove('block');
+      englishContent.classList.add('block');
+      englishContent.classList.remove('hidden');
+
+      console.log('Idioma cambiado a Inglés');
+      document.documentElement.lang = 'en'; // Cambiar atributo lang
+    } else {
+      toggleSlider.style.transform = 'translateX(0)'; // Regresa el slider al inicio
+      textES.style.opacity = '1'; // Mostrar "ES"
+      textEN.style.opacity = '0'; // Ocultar "EN"
+
+      // Mostrar contenido en español, ocultar inglés
+      spanishContent.classList.add('block');
+      spanishContent.classList.remove('hidden');
+      englishContent.classList.add('hidden');
+      englishContent.classList.remove('block');
+
+      console.log('Idioma cambiado a Español');
+      document.documentElement.lang = 'es'; // Cambiar atributo lang
+    }
   });
+});
+
 </script>
