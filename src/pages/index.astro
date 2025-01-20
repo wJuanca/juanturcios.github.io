@@ -10,19 +10,19 @@ const projects = [
     title: "Dental Health",
     description:
       "Se desarrolló un sistema para una clínica dental con funciones como la programación de citas, impresión de certificados y, como su uso principal, la creación de historias clínicas para los pacientes.",
-    image: "/assets/img/proyecto-clinica.jpg",
+    image: "../assets/img/proyecto-clinica.jpg",
     tools: [
       {
         name: "Java",
-        icon: "/assets/icons/java.png",
+        icon: "../assets/icons/java.png",
       },
       {
         name: "NetBeans",
-        icon: "/assets/icons/netbeans.png",
+        icon: "../assets/icons/netbeans.png",
       },
       {
         name: "SQL Server",
-        icon: "/assets/icons/sql.png",
+        icon: "../assets/icons/sql.png",
       },
     ],
     codeLink: "https://github.com/wJuanca/clinica-odontologica",
@@ -32,23 +32,23 @@ const projects = [
     title: "ONG Huellas de Amor",
     description:
       "Se desarrolló un sitio web para una ONG dedicada al rescate de animales y darles una nueva vida y una nueva familia. Este sitio web tiene la capacidad de recibir donaciones para apoyar a la ONG.",
-    image: "/assets/img/proyecto-ong.jpg",
+    image: "../assets/img/proyecto-ong.jpg",
     tools: [
       {
         name: "Vite",
-        icon: "/assets/icons/vite.png",
+        icon: "../assets/icons/vite.png",
       },
       {
         name: "React",
-        icon: "/assets/icons/react.png",
+        icon: "../assets/icons/react.png",
       },
       {
         name: "JavaScript",
-        icon: "/assets/icons/javascript.png",
+        icon: "../assets/icons/javascript.png",
       },
       {
         name: "Less",
-        icon: "/assets/icons/less.png",
+        icon: "../assets/icons/less.png",
       },
     ],
     codeLink: "https://github.com/wJuanca/ProyectoFinal",
@@ -58,23 +58,23 @@ const projects = [
     title: "Chrishop",
     description:
       "Desarrollo de una plataforma de comercio electrónico para la venta de productos personalizados, con funcionalidades como filtrado por categorías, visualización de productos destacados y diseño responsivo.",
-    image: "/assets/img/proyecto-chrishop.jpg",
+    image: "../assets/img/proyecto-chrishop.jpg",
     tools: [
       {
         name: "Astro",
-        icon: "/assets/icons/astro.png",
+        icon: "../assets/icons/astro.png",
       },
       {
         name: "Tailwind",
-        icon: "/assets/icons/tailwind.png",
+        icon: "../assets/icons/tailwind.png",
       },
       {
         name: "JavaScript",
-        icon: "/assets/icons/javascript.png",
+        icon: "../assets/icons/javascript.png",
       },
       {
         name: "VsCode",
-        icon: "/assets/icons/vscode.png",
+        icon: "../assets/icons/vscode.png",
       },
     ],
     codeLink: "https://github.com/wJuanca/chrishop",
@@ -105,6 +105,10 @@ const tools = [
   { name: "DaVinci Resolve", icon: "simple-icons:davinciresolve" },
   { name: "Less", icon: "logos:less" },
 ];
+
+
+import Image from "astro/components/Image.astro";
+import imagen1 from '../assets/img/perfil.png'
 ---
 
 <Layout title="My Portfolio">
@@ -297,8 +301,8 @@ const tools = [
           class="absolute inset-0 bg-pink-500 rounded-full blur-3xl opacity-20"
         >
         </div>
-        <img
-          src="/assets/img/perfil.png"
+        <Image
+          src={imagen1}
           alt="Juan Turcios"
           class="w-48 h-48 sm:w-64 sm:h-64 md:w-[450px] md:h-[450px] rounded-full object-cover relative z-10 mx-auto"
         />
