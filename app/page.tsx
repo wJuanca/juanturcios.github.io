@@ -1,6 +1,7 @@
 import Hero from "@/components/ladingpage"
 import Projects from "@/components/projects"
 import Skills from "@/components/skills"
+import Tools from "@/components/tools"
 
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero />
       <Projects />
       <Skills />
+      <Tools />
     </main>
   )
 }

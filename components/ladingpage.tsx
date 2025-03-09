@@ -8,7 +8,7 @@ import { Github, Linkedin, Instagram, FileDown, Mail, Code } from "lucide-react"
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false)
   const [typedText, setTypedText] = useState("")
-  const fullText = "Innovative Solutions Through Code"
+  const fullText = "Soluciones Innovadoras a Través del Código"
   const typingSpeed = 100
 
   useEffect(() => {
@@ -44,31 +44,33 @@ export default function Hero() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-20">
           {/* Contenido del texto */}
           <div className={`md:w-1/2 space-y-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            {/* Badge */}
+            {/* Globo*/}
             <div className="inline-block mb-2">
               <div className="px-4 py-1 bg-purple-600/20 rounded-full border border-purple-500/20">
-                <p className="text-purple-400 font-medium text-sm">FULL-STACK DEVELOPER</p>
+                <p className="text-purple-400 font-medium text-sm">
+                Desarrollador</p>
               </div>
             </div>
             
+            
             <div className="space-y-3">
-              <p className="text-purple-400 font-medium text-lg">Hello, I am</p>
+              <p className="text-purple-400 font-medium text-lg">Hola, soy</p>
               <h1 className="text-5xl md:text-7xl font-bold">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
                   Juan Turcios
                 </span>
               </h1>
               <h2 className="text-2xl md:text-3xl bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500 font-semibold pt-1">
-                Computer Science Engineer
+              Ingeniero en Ciencias de la Computación
               </h2>
             </div>
             
             <div className="relative h-0.5 w-40 bg-gradient-to-r from-purple-600 to-transparent my-6"></div>
             
             <p className="text-gray-300 text-lg max-w-xl leading-relaxed">
-              I create <span className="text-purple-400 font-medium">{typedText}</span><span className="animate-pulse">|</span>
-              <span className="block mt-3">Passionate about building high-quality applications that solve
-              real-world problems and deliver exceptional user experiences.</span>
+            Creo <span className="text-purple-400 font-medium">{typedText}</span><span className="animate-pulse">|</span>
+              <span className="block mt-3">Apasionado por construir aplicaciones de alta calidad que resuelvan
+              problemas del mundo real y brinden experiencias excepcionales a los usuarios.</span>
             </p>
 
             {/* Botones para contactarme y descargar curriculum */}
@@ -79,7 +81,7 @@ export default function Hero() {
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-lg transition-all shadow-md hover:shadow-purple-500/20 font-medium group"
               >
                 <FileDown className="w-5 h-5 mr-2 group-hover:animate-bounce" />
-                Download CV
+                Descargar CV
               </a>
 
               <Link 
@@ -87,12 +89,12 @@ export default function Hero() {
                 className="inline-flex items-center px-6 py-3 bg-white/5 border border-gray-700 hover:border-purple-500/50 text-white rounded-lg transition-all hover:bg-gray-800 font-medium"
               >
                 <Mail className="w-5 h-5 mr-2" />
-                Contact Me
+                Contáctame
               </Link>
             </div>
 
             <div className="pt-6">
-              <p className="text-gray-400 text-sm mb-3">Find me on</p>
+              <p className="text-gray-400 text-sm mb-3">Encuéntrame en</p>
               <div className="flex space-x-5">
                 <Link
                   href="https://github.com/juanturcios"
@@ -152,12 +154,12 @@ export default function Hero() {
               {/* Floating badges */}
               <div className="absolute -right-4 top-10 bg-gray-800 rounded-lg px-3 py-2 text-sm flex items-center shadow-lg border border-gray-700">
                 <Code className="w-4 h-4 mr-2 text-purple-400" />
-                <span>Full-Stack</span>
+                <span>Análisis</span>
               </div>
               
               <div className="absolute -left-8 bottom-20 bg-gray-800 rounded-lg px-3 py-2 text-sm flex items-center shadow-lg border border-gray-700">
                 <div className="w-2 h-2 rounded-full bg-green-500 mr-2 animate-pulse"></div>
-                <span>Available for hire</span>
+                <span>Disponible para trabajar</span>
               </div>
             </div>
           </div>
@@ -166,7 +168,7 @@ export default function Hero() {
         {/* Scroll Indicator */}
         <div className={`absolute bottom-10 left-1/2 transform -translate-x-1/2 transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
           <div className="flex flex-col items-center">
-            <p className="text-gray-400 text-sm mb-2">Scroll Down</p>
+            <p className="text-gray-400 text-sm mb-2">Desliza hacia abajo</p>
             <Link 
               href="#projects" 
               className="w-8 h-12 border-2 border-purple-500 rounded-full flex justify-center pt-1"

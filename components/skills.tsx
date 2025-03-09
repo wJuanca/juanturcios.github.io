@@ -1,47 +1,47 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Code, Lightbulb, Puzzle, Rocket, Users, Zap } from "lucide-react"
+import { UserCheck, Brain, Users, MessageSquare, Repeat, Layout } from "lucide-react"
 
 // Informacion de las skills
 const skillsData = [
   {
     id: 1,
-    title: "Problem Solving",
+    title: "Liderazgo",
     description:
-      "Analytical approach to breaking down complex problems into manageable components and developing effective solutions.",
-    icon: Puzzle,
+      "Demuestro un liderazgo positivo fomentando la colaboración y guiando a los equipos hacia el logro de metas compartidas mediante una comunicación clara y motivadora.",
+    icon: UserCheck,
   },
   {
     id: 2,
-    title: "Full-Stack Development",
-    description: "Proficient in both frontend and backend technologies, creating seamless end-to-end applications.",
-    icon: Code,
+    title: "Aprendizaje rápido",
+    description: "Poseo la capacidad de adaptarme rápidamente a nuevos entornos y tecnologías, adquiriendo habilidades y conocimientos de manera eficiente en un corto período de tiempo.",
+    icon: Brain,
   },
   {
     id: 3,
-    title: "Creative Thinking",
-    description: "Ability to think outside the box and develop innovative solutions to technical challenges.",
-    icon: Lightbulb,
-  },
-  {
-    id: 4,
-    title: "Performance Optimization",
-    description:
-      "Expertise in identifying and resolving performance bottlenecks to create fast, responsive applications.",
-    icon: Zap,
-  },
-  {
-    id: 5,
-    title: "Team Collaboration",
-    description: "Strong communication skills and experience working in agile teams to deliver high-quality projects.",
+    title: "Trabajo en equipo",
+    description: "Destaco en el trabajo colaborativo, contribuyendo con ideas, resolviendo conflictos y manteniendo un ambiente positivo para alcanzar los objetivos comunes.",
     icon: Users,
   },
   {
+    id: 4,
+    title: "Comunicación efectiva",
+    description:
+      "Poseo habilidades de comunicación claras y asertivas que me permiten transmitir ideas e información de manera comprensible y profesional.",
+    icon: MessageSquare,
+  },
+  {
+    id: 5,
+    title: "Adaptabilidad",
+    description: "Tengo la capacidad de ajustarme de manera efectiva a los cambios y desafíos, manteniendo un enfoque positivo y productivo en entornos dinámicos.",
+    icon: Repeat,
+  },
+  {
     id: 6,
-    title: "Project Management",
-    description: "Skilled in planning, organizing, and executing projects from conception to deployment.",
-    icon: Rocket,
+    title: "Diseño UI/UX",
+    description: "Tengo experiencia en la creación de interfaces de usuario atractivas y funcionales, enfocadas en ofrecer experiencias de usuario fluidas y satisfactorias.",
+    icon: Layout,
   },
 ]
 
@@ -73,7 +73,7 @@ export default function Skills() {
     <section id="skills" className="py-20 bg-black/90">
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-          <span className="gradient-text">My Skills</span>
+          <span className="gradient-text">Mis Habilidades</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

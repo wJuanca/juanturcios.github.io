@@ -6,17 +6,15 @@ import Link from "next/link"
 import { Github, ExternalLink, ChevronRight, ChevronLeft } from "lucide-react"
 import {
   SiReact,
-  SiNodedotjs,
-  SiMongodb,
-  SiStripe,
-  SiNextdotjs,
-  SiTypescript,
-  SiPrisma,
-  SiSocketdotio,
-  SiPython,
-  SiTensorflow,
-  SiFlask,
+  SiApachenetbeanside,
+  SiVite, 
+  SiJavascript,
+  SiLess,
+  SiAstro,
+  SiTailwindcss
 } from "react-icons/si"
+import { FaJava } from "react-icons/fa";
+import { DiMsqlServer } from "react-icons/di";
 
 // Definición de tipos para los proyectos
 interface Technology {
@@ -39,45 +37,43 @@ interface Project {
 const projectsData: Project[] = [
   {
     id: 1,
-    title: "E-commerce Platform",
+    title: "Dental Health",
     description:
-      "A full-stack e-commerce platform with user authentication, product management, cart functionality, and payment processing.",
+      "Se desarrolló un sistema para una clínica dental con funciones como la programación de citas, impresión de certificados y, como su uso principal, la creación de historias clínicas para los pacientes.",
     image: "/placeholder.svg?height=200&width=400",
     technologies: [
-      { name: "React", icon: SiReact, color: "#61DAFB" },
-      { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
-      { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
-      { name: "Stripe", icon: SiStripe, color: "#008CDD" },
+      { name: "Jva", icon: FaJava, color: "#61DAFB" },
+      { name: "NetBeans", icon: SiApachenetbeanside, color: "#ffffff"},
+      { name: "SQL Server", icon: DiMsqlServer , color: "#ff0000" },
     ],
     githubUrl: "https://github.com/juanturcios/ecommerce",
     liveUrl: "https://ecommerce-demo.com",
   },
   {
     id: 2,
-    title: "Task Management App",
+    title: "ONG Huellas de Amor",
     description:
-      "A collaborative task management application with real-time updates, task assignment, and progress tracking features.",
+      "Se desarrolló un sitio web para una ONG dedicada al rescate de animales y darles una nueva vida y una nueva familia. Este sitio web tiene la capacidad de recibir donaciones para apoyar a la ONG.",
     image: "/placeholder.svg?height=200&width=400",
     technologies: [
-      { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
-      { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
-      { name: "Prisma", icon: SiPrisma, color: "#2D3748" },
-      { name: "Socket.io", icon: SiSocketdotio, color: "#010101" },
+      { name: "Vite", icon: SiVite, color: "#ffff00" },
+      { name: "React", icon: SiReact, color: "#3178C6" },
+      { name: "JavaScript", icon: SiJavascript, color: "#ffff00" },
+      { name: "Less", icon: SiLess, color: "#ffffff" },
     ],
     githubUrl: "https://github.com/juanturcios/taskmanager",
     liveUrl: "https://taskmanager-demo.com",
   },
   {
     id: 3,
-    title: "AI Image Generator",
+    title: "Chrishop",
     description:
-      "An application that uses AI to generate unique images based on text prompts, with options to customize and download the results.",
+      "Desarrollo de una plataforma de comercio electrónico para la venta de productos personalizados, con funcionalidades como filtrado por categorías, visualización de productos destacados y diseño responsivo.",
     image: "/placeholder.svg?height=200&width=400",
     technologies: [
-      { name: "React", icon: SiReact, color: "#61DAFB" },
-      { name: "Python", icon: SiPython, color: "#3776AB" },
-      { name: "TensorFlow", icon: SiTensorflow, color: "#FF6F00" },
-      { name: "Flask", icon: SiFlask, color: "#000000" },
+      { name: "Astro", icon: SiAstro, color: "#ffffff" },
+      { name: "TailwindCss", icon: SiTailwindcss, color: "#3B82F6" },
+      { name: "JavaScript", icon: SiJavascript, color: "#ffff00" },
     ],
     githubUrl: "https://github.com/juanturcios/ai-image-generator",
     liveUrl: "https://ai-image-generator-demo.com",
