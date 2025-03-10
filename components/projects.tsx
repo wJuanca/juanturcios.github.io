@@ -158,7 +158,7 @@ export default function Projects() {
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
             <div className="px-4 py-1 bg-purple-600/20 rounded-full">
-              <p className="text-purple-400 font-medium text-sm">PORTFOLIO</p>
+              <p className="text-purple-400 font-medium text-sm">PORTAFOLIO</p>
             </div>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">

@@ -143,7 +143,7 @@ export default function Hero() {
               {/* Image container */}
               <div className="absolute inset-5 rounded-full overflow-hidden border-4 border-gray-800">
                 <Image
-                  src="/placeholder.svg?height=400&width=400"
+                  src="/img/perfil.png"
                   alt="Juan Turcios"
                   fill
                   className="object-cover relative z-10"
@@ -157,7 +157,7 @@ export default function Hero() {
                 <span>Análisis</span>
               </div>
               
-              <div className="absolute -left-8 bottom-20 bg-gray-800 rounded-lg px-3 py-2 text-sm flex items-center shadow-lg border border-gray-700">
+              <div className="absolute -left-8 bottom-20 bg-gray-800 rounded-lg px-3 py-2 text-sm flex items-center shadow-lg border border-gray-700 z-50">
                 <div className="w-2 h-2 rounded-full bg-green-500 mr-2 animate-pulse"></div>
                 <span>Disponible para trabajar</span>
               </div>
@@ -165,7 +165,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
+        {/* Indicar de hacer scroll */}
         <div className={`absolute bottom-10 left-1/2 transform -translate-x-1/2 transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
           <div className="flex flex-col items-center">
             <p className="text-gray-400 text-sm mb-2">Desliza hacia abajo</p>
@@ -180,7 +180,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Add CSS for custom animations */}
+      {/* Animaciones */}
       <style jsx global>{`
         @keyframes pulse-slow {
           0%, 100% {
