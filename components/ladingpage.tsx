@@ -76,7 +76,7 @@ export default function Hero() {
             {/* Botones para contactarme y descargar curriculum */}
             <div className="flex flex-col sm:flex-row sm:items-center gap-6 pt-4">
               <a
-                href="/path-to-your-cv.pdf"
+                href="/pdf/Curriculum.pdf"
                 download
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-lg transition-all shadow-md hover:shadow-purple-500/20 font-medium group"
               >
@@ -97,7 +97,7 @@ export default function Hero() {
               <p className="text-gray-400 text-sm mb-3">Encuéntrame en</p>
               <div className="flex space-x-5">
                 <Link
-                  href="https://github.com/juanturcios"
+                  href="https://github.com/wJuanca"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors hover:scale-110 transform duration-200"
@@ -106,7 +106,7 @@ export default function Hero() {
                   <Github className="w-6 h-6" />
                 </Link>
                 <Link
-                  href="https://linkedin.com/in/juanturcios"
+                  href="https://www.linkedin.com/in/juanturcios1/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors hover:scale-110 transform duration-200"
@@ -115,7 +115,7 @@ export default function Hero() {
                   <Linkedin className="w-6 h-6" />
                 </Link>
                 <Link
-                  href="https://instagram.com/juanturcios"
+                  href="https://www.instagram.com/_juancat/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors hover:scale-110 transform duration-200"
