@@ -3,7 +3,7 @@
 import type React from "react"
 import { useState, useRef } from "react"
 import { Send, Mail, Phone, MapPin } from "lucide-react"
-import emailjs from '@emailjs/browser'
+import emailjs from "@emailjs/browser"
 
 export default function Contact() {
   const form = useRef<HTMLFormElement>(null)
@@ -29,25 +29,33 @@ export default function Contact() {
     setIsSubmitting(true)
 
     try {
-      // Enviar correo usando EmailJS
-      const result = await emailjs.sendForm(
-        'NEXT_PUBLIC_EMAILJS_SERVICE_ID', //ID del servici de Gmail
-        'NEXT_PUBLIC_EMAILJS_TEMPLATE_ID', //ID del template de los correos
-        form.current!, 
-        'NEXT_PUBLIC_EMAILJS_PUBLIC_KEY' //Key publica de la cuenta
-      )
+      // Acceder a las variables de entorno
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
 
-      if (result.text === 'OK') {
+      console.log("EmailJS Config:", { serviceId, templateId, publicKey })
+
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error("Faltan variables de entorno para EmailJS")
+      }
+
+      // Enviar correo usando EmailJS
+      const result = await emailjs.sendForm(serviceId, templateId, form.current!, publicKey)
+
+      console.log("EmailJS Result:", result)
+
+      if (result.text === "OK") {
         setSubmitStatus({
           success: true,
           message: "¡Tu mensaje ha sido enviado con éxito!",
         })
         setFormData({ name: "", email: "", phone: "", message: "" })
       } else {
-        throw new Error('Falló el envío del mensaje')
+        throw new Error("Falló el envío del mensaje")
       }
     } catch (error) {
-      console.error('Error al enviar el mensaje:', error)
+      console.error("Error al enviar el mensaje:", error)
       setSubmitStatus({
         success: false,
         message: "No se pudo enviar el mensaje. Por favor, intenta de nuevo.",
@@ -67,8 +75,8 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="space-y-8">
             <p className="text-gray-300 text-lg">
-              ¿Tienes un proyecto en mente o quieres discutir posibles oportunidades? No dudes en contactarme a través del
-              formulario o utilizando mi información de contacto.
+              ¿Tienes un proyecto en mente o quieres discutir posibles oportunidades? No dudes en contactarme a través
+              del formulario o utilizando mi información de contacto.
             </p>
 
             {/* informacion de mi correo electronico */}
@@ -124,7 +132,7 @@ export default function Contact() {
                   className="w-full bg-black/50 border border-gray-700 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="email" className="block text-sm font-medium mb-2">
                   Correo Electrónico
@@ -139,7 +147,7 @@ export default function Contact() {
                   className="w-full bg-black/50 border border-gray-700 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium mb-2">
                   Teléfono
@@ -171,11 +179,7 @@ export default function Contact() {
               </div>
 
               {/* Campo oculto para enviar la hora actual */}
-              <input 
-                type="hidden" 
-                name="time" 
-                value={new Date().toLocaleString()}
-              />
+              <input type="hidden" name="time" value={new Date().toLocaleString()} />
 
               <button
                 type="submit"
@@ -208,3 +212,4 @@ export default function Contact() {
     </section>
   )
 }
+
