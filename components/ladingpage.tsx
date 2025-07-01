@@ -76,7 +76,7 @@ export default function Hero() {
             {/* Botones para contactarme y descargar curriculum */}
             <div className="flex flex-col sm:flex-row sm:items-center gap-6 pt-4">
               <a
-                href="/pdf/Curriculum.pdf"
+                href="/pdf/cvjuanturcios.pdf"
                 download
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-lg transition-all shadow-md hover:shadow-purple-500/20 font-medium group"
               >
