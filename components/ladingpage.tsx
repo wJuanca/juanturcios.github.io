@@ -69,8 +69,7 @@ export default function Hero() {
             
             <p className="text-gray-300 text-lg max-w-xl leading-relaxed">
             Creo <span className="text-purple-400 font-medium">{typedText}</span><span className="animate-pulse">|</span>
-              <span className="block mt-3">Apasionado por construir aplicaciones de alta calidad que resuelvan
-              problemas del mundo real y brinden experiencias excepcionales a los usuarios.</span>
+              <span className="block mt-3">Me especializo en el desarrollo de soluciones tecnológicas que aportan valor real y ayudan a resolver necesidades diversas. Disfruto trabajar en proyectos que combinan habilidades técnicas y creatividad, siempre enfocado en lograr resultados de calidad y en ofrecer buenas experiencias a los usuarios. Me motiva aprender nuevas herramientas, adaptarme a distintos retos y colaborar con equipos para alcanzar objetivos comunes.</span>
             </p>
 
             {/* Botones para contactarme y descargar curriculum */}
