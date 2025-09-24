@@ -142,7 +142,7 @@ export default function Hero() {
               {/* Image container */}
               <div className="absolute inset-5 rounded-full overflow-hidden border-4 border-gray-800">
                 <Image
-                  src="/img/perfil.png"
+                  src="/img/foto_cv.png"
                   alt="Juan Turcios"
                   fill
                   className="object-cover relative z-10"
