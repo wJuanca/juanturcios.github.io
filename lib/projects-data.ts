@@ -68,7 +68,24 @@ export const allProjects: Project[] = [
     featured: true,
   },
   {
-    id: 3,
+  id: 3,
+  title: "Heladería Online",
+  description:
+    "Desarrollo de una plataforma de comercio electrónico para la venta de helados artesanales, con funcionalidades como selección de sabores, resumen de pedido, sucursales disponibles y diseño responsivo para una experiencia de compra fácil y atractiva.",
+  image: "/img/heladeria.png",
+  technologies: [
+    { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
+    { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
+    { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+  ],
+  githubUrl: "",
+  liveUrl: "https://heladeria-navy.vercel.app/",
+  category: "E-commerce",
+  featured: true,
+},
+
+  {
+    id: 4,
     title: "Chrishop",
     description:
       "Desarrollo de una plataforma de comercio electrónico para la venta de productos personalizados, con funcionalidades como filtrado por categorías, visualización de productos destacados y diseño responsivo.",
@@ -81,10 +98,10 @@ export const allProjects: Project[] = [
     githubUrl: "https://github.com/wJuanca/chrishop",
     liveUrl: "https://wjuanca.github.io/chrishop/",
     category: "E-commerce",
-    featured: true,
+    featured: false,
   },
   {
-    id: 4,
+    id: 5,
     title: "Dental Health",
     description:
       "Se desarrolló un sistema para una clínica dental con funciones como la programación de citas, impresión de certificados y, como su uso principal, la creación de historias clínicas para los pacientes.",
@@ -100,7 +117,7 @@ export const allProjects: Project[] = [
     featured: false,
   },
   {
-    id: 5,
+    id: 6,
     title: "ONG Huellas de Amor",
     description:
       "Se desarrolló un sitio web para una ONG dedicada al rescate de animales y darles una nueva vida y una nueva familia. Este sitio web tiene la capacidad de recibir donaciones para apoyar a la ONG.",
