@@ -57,17 +57,37 @@ export default function AllProjects() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-black to-gray-900">
       {/* Header */}
-      <div className="bg-black/80 backdrop-blur-md py-4 sticky top-0 z-50">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2 text-white hover:text-purple-400 transition-colors">
-              <Home className="w-5 h-5" />
-              <span>Volver al Inicio</span>
-            </Link>
-            <h1 className="text-2xl font-bold gradient-text">Todos los Proyectos</h1>
-          </div>
-        </div>
+<div className="bg-black/80 backdrop-blur-md py-4 sticky top-0 z-50 border-b border-gray-800">
+  <div className="container mx-auto px-4 md:px-6">
+    <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
+
+      {/* Left: Breadcrumb + botón inicio */}
+      <div className="flex items-center gap-3">
+        <Link
+          href="/"
+          className="flex items-center gap-2 text-white hover:text-purple-400 transition-colors"
+        >
+          <Home className="w-5 h-5" />
+          <span className="hidden sm:inline">Inicio</span>
+        </Link>
+
+        <span className="text-gray-500">/</span>
+
+        <span className="text-white font-medium">Proyectos</span>
       </div>
+
+      {/* Right: Título + subtítulo */}
+      <div className="text-right">
+        <h1 className="text-2xl font-bold gradient-text">Explora mis proyectos</h1>
+        <p className="text-sm text-gray-400">
+          Navega por todas las categorías y descubre mis trabajos desarrollados
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 
       <section className="py-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -107,7 +127,8 @@ export default function AllProjects() {
                   visibleProjects.includes(index) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                 }`}
               >
-                <div className="grid md:grid-cols-12 gap-8 p-8 relative">
+                <div className="grid md:grid-cols-12 gap-8 p-8 relative items-start">
+
                   {/* Project background effect */}
                   <div className="absolute inset-0 bg-gradient-to-b from-purple-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 

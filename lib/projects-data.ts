@@ -37,6 +37,23 @@ export interface Project {
 export const allProjects: Project[] = [
   {
     id: 1,
+    title: "PaDonde",
+    description:
+      "Desarrollo completo de PaDonde, una plataforma web moderna para descubrir restaurantes, cafés, bares y lugares turísticos en Honduras. Incluye buscador avanzado, filtros dinámicos, panel administrativo para gestión de lugares, integración de mapas, páginas SEO-friendly, optimización de rendimiento y diseño responsivo. El objetivo del proyecto es mejorar la visibilidad de negocios locales y ofrecer a los usuarios una forma rápida y visual de encontrar a dónde ir.",
+    image: "/img/padonde.png",
+    technologies: [
+      { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
+      { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+      { name: "TailwindCSS", icon: SiTailwindcss, color: "#38BDF8" },
+    ],
+    githubUrl: "",
+    liveUrl: "https://padondehn.com",
+    category: "Web Development",
+    featured: true,
+  },
+
+  {
+    id: 2,
     title: "POS de Honduras",
     description:
       "Diseño e implementación de un sitio web para la empresa de sistemas POS de Honduras. Incluye un catálogo de productos, carrito de cotización y un panel administrativo para gestión de contenido. El sitio fue desarrollado con diseño responsivo y enfoque en mejorar la presencia digital y eficiencia operativa de la empresa.",
@@ -52,7 +69,7 @@ export const allProjects: Project[] = [
     featured: true,
   },
   {
-    id: 2,
+    id: 3,
     title: "Clínica Odontológica",
     description:
       "Diseño e implementación de un sitio web moderno para una clínica odontológica. El sistema permite a los pacientes reservar citas en línea de manera fácil y rápida, mientras que el administrador puede gestionar citas, pacientes y dar seguimiento a sus tratamientos. El diseño centrado en el usuario mejora la experiencia tanto para clientes como para el personal administrativo, haciendo más eficiente la operación de la clínica.",
@@ -68,24 +85,24 @@ export const allProjects: Project[] = [
     featured: true,
   },
   {
-  id: 3,
-  title: "Heladería Online",
-  description:
-    "Desarrollo de una plataforma de comercio electrónico para la venta de helados artesanales, con funcionalidades como selección de sabores, resumen de pedido, sucursales disponibles y diseño responsivo para una experiencia de compra fácil y atractiva.",
-  image: "/img/heladeria.png",
-  technologies: [
-    { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
-    { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
-    { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
-  ],
-  githubUrl: "",
-  liveUrl: "https://heladeria-navy.vercel.app/",
-  category: "E-commerce",
-  featured: true,
-},
+    id: 4,
+    title: "Heladería Online",
+    description:
+      "Desarrollo de una plataforma de comercio electrónico para la venta de helados artesanales, con funcionalidades como selección de sabores, resumen de pedido, sucursales disponibles y diseño responsivo para una experiencia de compra fácil y atractiva.",
+    image: "/img/heladeria.png",
+    technologies: [
+      { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
+      { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
+      { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+    ],
+    githubUrl: "",
+    liveUrl: "https://heladeria-navy.vercel.app/",
+    category: "E-commerce",
+    featured: false,
+  },
 
   {
-    id: 4,
+    id: 5,
     title: "Chrishop",
     description:
       "Desarrollo de una plataforma de comercio electrónico para la venta de productos personalizados, con funcionalidades como filtrado por categorías, visualización de productos destacados y diseño responsivo.",
@@ -101,7 +118,7 @@ export const allProjects: Project[] = [
     featured: false,
   },
   {
-    id: 5,
+    id: 6,
     title: "Dental Health",
     description:
       "Se desarrolló un sistema para una clínica dental con funciones como la programación de citas, impresión de certificados y, como su uso principal, la creación de historias clínicas para los pacientes.",
@@ -117,7 +134,7 @@ export const allProjects: Project[] = [
     featured: false,
   },
   {
-    id: 6,
+    id: 7,
     title: "ONG Huellas de Amor",
     description:
       "Se desarrolló un sitio web para una ONG dedicada al rescate de animales y darles una nueva vida y una nueva familia. Este sitio web tiene la capacidad de recibir donaciones para apoyar a la ONG.",

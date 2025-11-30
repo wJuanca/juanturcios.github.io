@@ -76,7 +76,8 @@ export default function Projects() {
                 visibleProjects.includes(index) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
             >
-              <div className="grid md:grid-cols-12 gap-8 p-8 relative">
+              <div className="grid md:grid-cols-12 gap-8 p-8 relative items-start">
+
                 {/* Project background effect */}
                 <div className="absolute inset-0 bg-gradient-to-b from-purple-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 
